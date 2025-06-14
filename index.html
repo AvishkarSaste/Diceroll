@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title> Roll a Dice App </title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<style>
+			*{font-size:4vw; font-family:Cambria; text-align:center; margin:auto;}
+			body{background-color:linen;}
+			h1{margin:2%;}
+			img{width:15vw;}	
+		</style>
+	</head>
+	<body>
+		<h1> Roll a Dice </h1>
+		<form onsubmit="show()">
+			<input type ="submit" value="Roll" />
+			<br/>
+		</form>
+			<img id = "im1" src="die1.PNG" alt="1" />
+					
+		<script>
+			function show()
+			{
+			event.preventDefault();
+			let im1=document.getElementById("im1");
+			let images=["die1.PNG","die2.PNG","die3.PNG","die4.PNG","die5.PNG","die6.PNG"];
+			let r=parseInt(Math.random()*images.length);
+			im1.src=images[r];
+			im1.alt="dice" +(r+1);
+			}
+		</script>
+	</body>
+</html>
